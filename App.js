@@ -2,6 +2,21 @@ import React from 'react';
 import {SafeAreaView, View, StatusBar, Image, Text} from 'react-native';
 import { Asset } from 'react-native-unimodules';
 
+//import { setCustomSourceTransformer } from 'react-native/Libraries/Image/resolveAssetSource';
+// Override React Native's asset resolution for `Image` components, this recoverse the behaviour I want
+/*
+setCustomSourceTransformer(resolver => {
+  // try {
+  //     const asset = Asset.fromMetadata(resolver.asset);
+  //     return resolver.fromSource(asset.downloaded ? asset.localUri : asset.uri);
+  // }
+  // catch (e) {
+  //     return resolver.defaultAsset();
+  // }
+  return resolver.defaultAsset();
+});
+*/
+
 const imagen = require('./icono.png');
 
 const App: () => React$Node = () => {
